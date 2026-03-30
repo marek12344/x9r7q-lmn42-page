@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>WROTMET - Kontakt i Doradztwo Techniczne</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E61919",
+                        "background-light": "#0C0C0C",
+                        "background-dark": "#0C0C0C",
+                        "surface": "#141414",
+                        "text-main": "#F2F2F2",
+                        "text-muted": "#7a7a7a",
+                        "border-line": "#2A2A2A"
+                    },
+                    fontFamily: {
+                        "display": ["Clash Display", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0px" },
+                    letterSpacing: { "widest": "2px", "wider": "1px" }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; background-color: #0C0C0C; color: #F2F2F2; -webkit-font-smoothing: antialiased; }
+        .font-display { font-family: 'Clash Display', sans-serif; }
+        .grid-line-b { border-bottom: 1px solid #2A2A2A; }
+        .grid-line-t { border-top: 1px solid #2A2A2A; }
+        .grid-line-l { border-left: 1px solid #2A2A2A; }
+        .grid-line-r { border-right: 1px solid #2A2A2A; }
+        
+        .map-wrapper { 
+            filter: grayscale(1) invert(0.9) contrast(1.2); 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            border: 1px solid #2A2A2A; 
+            position: relative; 
+            height: 250px; 
+            overflow: hidden; 
+            margin-top: 1rem;
+        }
+        .map-wrapper:hover { filter: grayscale(0) invert(0) contrast(1); border-color: #E61919; }
+
+        .consultant-frame {
+            position: relative;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            overflow: hidden;
+        }
+        .consultant-frame::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 15px;
+            height: 15px;
+            border-top: 2px solid #E61919;
+            border-left: 2px solid #E61919;
+            z-index: 10;
+        }
+        .consultant-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .consultant-frame:hover .consultant-image {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark min-h-screen flex flex-col selection:bg-primary selection:text-white relative">
+
+    <!-- Global Navigation (Consistent with index.html) -->
+    <div id="global-nav" class="relative flex h-auto w-full flex-col bg-[#0C0C0C] font-body grid-line-b z-50 sticky top-0 transition-all duration-300">
+        <div class="px-4 md:px-10 lg:px-20 flex flex-1 justify-center py-0">
+            <div class="flex flex-col w-full flex-1">
+                <header id="main-header" class="flex items-center justify-between whitespace-nowrap h-[80px]">
+                    <div class="flex-shrink-0 flex items-center gap-4 text-white h-full grid-line-r pr-4 md:pr-6 cursor-pointer" onclick="window.location.href='index.html'">
+                        <div class="flex items-center justify-center h-full w-auto py-4">
+                            <img src="images/logo-wrotmet.jpg" alt="WROTMET Logo" class="h-10 w-auto object-contain animate-logo-color hover:grayscale-0 transition-all duration-700" />
+                        </div>
+                    </div>
+                    <div class="hidden md:flex flex-1 justify-end gap-4 lg:gap-6 h-full">
+                        <nav class="flex items-center gap-4 lg:gap-6 h-full">
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="index.html">STRONA GŁÓWNA</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="index.html#o-nas">O NAS</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="index.html#proces">PROCES</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="katalog.html">BRAMY & OGRODZENIA</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="automatyka.html">AUTOMATYKA</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="ciecie-laserowe.html">CIĘCIE LASEROWE</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="realizacje.html">NASZE REALIZACJE</a>
+                            <a class="text-primary text-[12px] font-medium tracking-wider uppercase h-full flex items-center grid-line-l px-4 md:px-6 relative" href="kontakt.html">
+                                KONTAKT
+                                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-primary"></span>
+                            </a>
+                            <!-- Social Icons -->
+                            <div class="flex items-center gap-4 h-full grid-line-l pl-8 pr-4">
+                                <a href="https://www.facebook.com/www.wrotmet.eu" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                                <a href="https://youtu.be/lwpFwjnHqcQ?si=YBopByl7lnIpfb9f" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-text-main grid-line-l pl-8 h-full flex items-center">
+                        <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[45] bg-background-dark/98 flex-col items-center justify-center gap-8 hidden md:hidden">
+        <a class="text-xl font-display font-bold uppercase tracking-[2px] text-text-main hover:text-primary transition-colors" href="index.html">STRONA GŁÓWNA</a>
+        <a class="text-xl font-display font-bold uppercase tracking-[2px] text-text-main hover:text-primary transition-colors" href="index.html#o-nas">O NAS</a>
+        <a class="text-xl font-display font-bold uppercase tracking-[2px] text-text-main hover:text-primary transition-colors" href="katalog.html">KATALOG</a>
+        <a class="text-xl font-display font-bold uppercase tracking-[2px] text-text-main hover:text-primary transition-colors" href="ciecie-laserowe.html">CIĘCIE LASEROWE</a>
+        <a class="text-xl font-display font-bold uppercase tracking-[2px] text-text-main hover:text-primary transition-colors" href="realizacje.html">REALIZACJE</a>
+        <a class="text-xl font-display font-bold uppercase tracking-[2px] text-primary" href="STRONA KONTAKT.html">KONTAKT</a>
+        <div class="flex items-center gap-8 mt-4">
+            <a href="https://www.facebook.com/www.wrotmet.eu" target="_blank" class="group transition-all duration-300"><svg class="w-8 h-8 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://youtu.be/lwpFwjnHqcQ?si=YBopByl7lnIpfb9f" target="_blank" class="group transition-all duration-300"><svg class="w-8 h-8 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+    </div>
+
+    <!-- Main Content Grid (Modern Split Design) -->
+    <main class="flex-1 flex flex-col lg:flex-row min-h-[calc(100vh-80px-100px)]">
+        
+        <!-- Left Column: Contact Info & Maps -->
+        <section class="w-full lg:w-1/2 p-8 md:p-12 lg:p-20 flex flex-col justify-center grid-line-r grid-line-b lg:grid-line-b-0 relative overflow-hidden bg-background-dark">
+            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#2a2a2a 1px, transparent 1px); background-size: 32px 32px;"></div>
+            
+            <div class="relative z-10 max-w-xl w-full mx-auto lg:mx-0">
+                <h2 class="text-4xl lg:text-5xl font-display font-bold uppercase tracking-widest text-text-main leading-tight mb-2">P.P.U.H. WROTMET</h2>
+                <p class="text-2xl font-display font-bold uppercase tracking-widest text-text-main mb-8">Jacek Pieńkos</p>
+                <h3 class="text-5xl lg:text-7xl font-display font-bold tracking-widest uppercase mb-4">
+                    +48 23<br />
+                    <span class="text-text-muted">692 58 85</span>
+                </h3>
+                <p class="text-[12px] uppercase tracking-[3px] text-primary font-bold mb-12 flex items-center gap-4">
+                    <span class="w-8 h-[1px] bg-primary block"></span> NASZE LOKALIZACJE
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Siedziba Pułtusk -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-3">
+                            <p class="text-[11px] uppercase tracking-[2px] text-primary font-bold mb-1">Centrala Pułtusk</p>
+                            <p class="text-[14px] text-text-main/90 leading-relaxed font-medium uppercase tracking-wider">
+                                ul. Mickiewicza 47/49a<br />
+                                06-100 Pułtusk
+                            </p>
+                            <div class="flex flex-col gap-1 pt-2 border-t border-border-line">
+                                <p class="text-[10px] uppercase tracking-[2px] text-text-muted font-bold">Email</p>
+                                <a href="mailto:biuro@wrotmet.pl" class="text-[13px] font-bold text-text-main hover:text-primary transition-colors">biuro@wrotmet.pl</a>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <p class="text-[10px] uppercase tracking-[2px] text-text-muted font-bold">Telefon</p>
+                                <a href="tel:+48236925885" class="text-[13px] font-bold text-text-main hover:text-primary transition-colors">+48 23 692 58 85</a>
+                            </div>
+                        </div>
+                        <div class="map-wrapper">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2417.80164287803!2d21.080556!3d52.709167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471e95e799775e5b%3A0xc6c71f65f08e788c!2sMickiewicza%2047%2C%2006-100%20Pu%C5%82tusk!5e0!3m2!1spl!2spl!4v1711122500000" width="100%" height="100%" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Oddział Jabłonna -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-3">
+                            <p class="text-[11px] uppercase tracking-[2px] text-primary font-bold mb-1">Oddział Jabłonna</p>
+                            <p class="text-[14px] text-text-main/90 leading-relaxed font-medium uppercase tracking-wider">
+                                ul. Modlińska 14<br />
+                                05-110 Jabłonna
+                            </p>
+                            <div class="flex flex-col gap-1 pt-2 border-t border-border-line">
+                                <p class="text-[10px] uppercase tracking-[2px] text-text-muted font-bold">Email</p>
+                                <a href="mailto:jablonna@wrotmet.pl" class="text-[13px] font-bold text-text-main hover:text-primary transition-colors">jablonna@wrotmet.pl</a>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <p class="text-[10px] uppercase tracking-[2px] text-text-muted font-bold">Telefon</p>
+                                <a href="tel:+48609090460" class="text-[13px] font-bold text-text-main hover:text-primary transition-colors">+48 609 090 460</a>
+                            </div>
+                        </div>
+                        <div class="map-wrapper">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.89!2d20.91!3d52.37!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDIyJzEyLjAiTiAyMMKwNTQnMzYuMCJF!5e0!3m2!1spl!2spl!4v1711122600000" width="100%" height="100%" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: Consultant Iga Rudowska -->
+        <section class="w-full lg:w-1/2 bg-surface p-8 md:p-12 lg:p-20 flex flex-col justify-center relative">
+            <div class="max-w-md w-full mx-auto lg:mx-0">
+                <div class="mb-12">
+                    <p class="text-[12px] uppercase tracking-[3px] text-primary font-bold mb-4 flex items-center gap-4">
+                        <span class="w-8 h-[1px] bg-primary block"></span> TWÓJ DORADCA
+                    </p>
+                    <h3 class="text-4xl font-display font-bold uppercase tracking-widest text-text-main leading-tight">Iga Rudowska</h3>
+
+                </div>
+                
+                <div class="flex flex-col gap-12">
+                    <!-- Consultant Photo -->
+                    <div class="w-full md:w-64 aspect-[3/4] consultant-frame">
+                        <img src="konsultantka.png" alt="Iga Rudowska - Doradca WROTMET" class="consultant-image" />
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="grid grid-cols-1 gap-8">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-[2px] text-text-muted mb-2 font-bold">Email Bezpośredni</p>
+                                <a class="text-xl font-bold text-text-main hover:text-primary transition-colors tracking-wider" href="mailto:biuro@wrotmet.pl">biuro@wrotmet.pl</a>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-[2px] text-text-muted mb-2 font-bold">Telefon</p>
+                                <a class="text-xl font-bold text-text-main hover:text-primary transition-colors tracking-widest" href="tel:+48236925885">+48 23 692 58 85</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-8 border-t border-border-line">
+                        <p class="text-[13px] text-text-main/50 uppercase tracking-[1px] leading-relaxed">
+                            Jesteśmy dostępni od poniedziałku do piątku w godzinach <span class="text-text-main">7:00–15:00</span> i działamy na terenie całej Polski. Zazwyczaj udzielamy informacji natychmiastowo, a na bardziej złożone zapytania odpowiadamy w ciągu <span class="text-text-main">24–48 godzin</span>, przygotowując rzetełną i dostosowaną ofertę.
+                        </p>
+                    </div>
+                    
+                    <a class="inline-flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-white font-bold text-[14px] uppercase tracking-[3px] py-6 px-10 transition-all" href="mailto:biuro@wrotmet.pl">
+                        <span>Wyślij zapytanie</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Consistent with index.html) -->
+    <footer class="w-full px-4 md:px-10 lg:px-20 py-12 grid-line-t mt-auto">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <img src="images/logo-wrotmet.jpg" alt="WROTMET Logo" class="h-10 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700">
+        </div>
+        <div class="flex flex-col items-center md:items-end gap-2">
+            <p class="text-text-main/40 text-[11px] font-medium tracking-widest uppercase">© 2026 WROTMET. WSZELKIE PRAWA ZASTRZEŻONE. | DZIAŁAMY NA TERENIE CAŁEJ POLSKI. | DZIAŁAMY NA TERENIE CAŁEJ POLSKI.</p>
+            <div class="flex gap-4 mt-2 items-center">
+                <a href="https://www.facebook.com/www.wrotmet.eu" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                <a href="https://youtu.be/lwpFwjnHqcQ?si=YBopByl7lnIpfb9f" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button id="music-toggle-btn" class="fixed bottom-8 right-8 z-[100] w-12 h-12 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-2xl" style="background: rgba(255,255,255,0.08);" title="Kliknij aby wlaczyc muzyke">
+        <svg id="music-icon-svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
