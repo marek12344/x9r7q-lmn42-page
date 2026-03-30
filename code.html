@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WROTMET - Bramy &amp; Ogrodzenia</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E61919",
+                        "background-light": "#0C0C0C",
+                        "background-dark": "#0C0C0C",
+                        "surface": "#141414",
+                        "text-main": "#F2F2F2",
+                        "muted": "#F2F2F2", // Changed to frost white as per request
+                        "border-line": "#2A2A2A"
+                    },
+                    fontFamily: {
+                        "display": ["Clash Display", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "sm": "0px",
+                        "md": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "2xl": "0px",
+                        "3xl": "0px",
+                        "full": "0px"
+                    },
+                    spacing: {
+                        "sm": "16px",
+                        "md": "32px",
+                        "lg": "64px",
+                        "xl": "128px"
+                    },
+                    letterSpacing: {
+                        "widest": "2px",
+                        "wider": "1px"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0C0C0C;
+            color: #F2F2F2;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Clash Display', sans-serif;
+        }
+        
+        /* Structural Grid Lines */
+        .grid-line-b { border-bottom: 1px solid #2A2A2A; }
+        .grid-line-t { border-top: 1px solid #2A2A2A; }
+        .grid-line-l { border-left: 1px solid #2A2A2A; }
+        .grid-line-r { border-right: 1px solid #2A2A2A; }
+        
+        /* Interactive States */
+        .hover-border-primary:hover { border-color: #E61919; }
+        .hover-text-primary:hover { color: #E61919; }
+        
+        /* Image Hover Effect */
+        .product-card:hover .product-img {
+            transform: scale(1.02);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+<body class="bg-background-dark min-h-screen flex flex-col selection:bg-primary selection:text-white">
+<!-- Global Navigation (Shared Component) -->
+<div class="relative flex h-auto w-full flex-col bg-[#0C0C0C] group/design-root overflow-x-hidden font-body grid-line-b z-50 sticky top-0">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 flex flex-1 justify-center py-0">
+<div class="layout-content-container flex flex-col w-full flex-1">
+<header class="flex items-center justify-between whitespace-nowrap h-[80px]">
+<div class="flex items-center gap-4 text-white h-full grid-line-r pr-8">
+<!-- Signet / Logo -->
+<div class="size-6 text-primary flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-display font-semibold tracking-widest uppercase mt-1">WROTMET</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 h-full">
+<nav class="flex items-center gap-8 h-full">
+<a class="text-text-main hover-text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-8" href="#">STRONA GŁÓWNA</a>
+<a class="text-text-main hover-text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-8" href="#">O NAS</a>
+<a class="text-text-main hover-text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-8" href="#">PROCES</a>
+<a class="text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-8 relative" href="#">
+                                    BRAMY &amp; OGRODZENIA
+                                    <span class="absolute bottom-0 left-0 w-full h-[2px] bg-primary"></span>
+</a>
+<a class="text-text-main hover-text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-8" href="#">AUTOMATYKA</a>
+<a class="text-text-main hover-text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l grid-line-r px-8" href="#">PORTFOLIO</a>
+</nav>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden flex items-center h-full grid-line-l pl-6">
+<span class="material-symbols-outlined text-text-main text-2xl">menu</span>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Header Area -->
+<div class="w-full px-4 md:px-10 lg:px-20 py-md lg:py-lg grid-line-b">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="flex flex-col gap-4 max-w-2xl">
+<h1 class="text-text-main text-4xl md:text-5xl lg:text-[72px] font-display font-semibold leading-[1.1] tracking-widest uppercase">
+                    BRAMY &amp;<br/>OGRODZENIA
+                </h1>
+<p class="text-[#F2F2F2] text-[15px] font-body leading-[1.6] max-w-md mt-4 opacity-90">
+                    Architektoniczny rygor i bezkompromisowe bezpieczeństwo. 
+                    Systemy zaprojektowane by trwać, wycinane laserowo z najwyższą precyzją.
+                </p>
+</div>
+<!-- Category Filter Bar -->
+<div class="flex flex-wrap gap-4 md:gap-8 pt-8 md:pt-0">
+<a class="text-[12px] font-medium tracking-wider uppercase text-primary border-b border-primary pb-1 transition-colors" href="#">WSZYSTKIE</a>
+<a class="text-[12px] font-medium tracking-wider uppercase text-[#F2F2F2] hover-text-primary border-b border-transparent hover:border-primary pb-1 transition-colors" href="#">PRZĘSŁA</a>
+<a class="text-[12px] font-medium tracking-wider uppercase text-[#F2F2F2] hover-text-primary border-b border-transparent hover:border-primary pb-1 transition-colors" href="#">FURTKI</a>
+<a class="text-[12px] font-medium tracking-wider uppercase text-[#F2F2F2] hover-text-primary border-b border-transparent hover:border-primary pb-1 transition-colors" href="#">BRAMY WJAZDOWE</a>
+<a class="text-[12px] font-medium tracking-wider uppercase text-[#F2F2F2] hover-text-primary border-b border-transparent hover:border-primary pb-1 transition-colors" href="#">BLOCZKI JONIEC</a>
+</div>
+</div>
+</div>
+<!-- Main Content Area: Masonry Grid & Process -->
+<main class="w-full px-4 md:px-10 lg:px-20 py-lg flex-1 flex flex-col lg:flex-row gap-lg lg:gap-0 max-w-[1440px] mx-auto">
+<!-- Masonry Product Gallery (Left/Main Area) -->
+<div class="w-full lg:w-3/4 lg:grid-line-r lg:pr-lg grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12 items-start">
+<!-- Product Card 1 -->
+<div class="product-card group flex flex-col gap-4 cursor-pointer">
+<div class="w-full aspect-[4/5] bg-surface overflow-hidden grid-line-b grid-line-t grid-line-l grid-line-r border-border-line group-hover:border-primary transition-colors relative">
+<div class="absolute inset-0 bg-cover bg-center product-img" data-alt="Modern dark steel architectural fence structure" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvWZ57Ssk7djhhAIWf2XnLrUFBY7BQcAb_7iQ7roTJs2L6zTc6bvT5kbvP7JPCH6I2D34Olxpv6MoGqlo9BQWi2sw4anhDKbIY9OGQiVqdfuVW6s5BRElhvNEieMTnODlSvtYNQfbxKgHndHQrLOpOLUkxHYZ_Fn_8orWTbXxZfUpakTQJsuJmylETDpxYqCv7GdoSn3ebfpPI6d0O90fr0_QuV3z90VVQ7GdgffPcL-dCynZjnqtTnTUsXkwnESPLQQFDd_W0IAeK');"></div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_outward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main text-lg font-display font-semibold tracking-wider uppercase">MODEL 04-A / LINEAR</h3>
+<div class="flex items-center gap-3 text-[#F2F2F2] text-[12px] font-medium tracking-wider uppercase opacity-80">
+<span>STAL OCYNKOWANA</span>
+<span class="w-1 h-1 bg-border-line rounded-full"></span>
+<span>MALOWANIE PROSZKOWE</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 (Offset down for masonry feel) -->
+<div class="product-card group flex flex-col gap-4 cursor-pointer md:mt-24">
+<div class="w-full aspect-square bg-surface overflow-hidden grid-line-b grid-line-t grid-line-l grid-line-r border-border-line group-hover:border-primary transition-colors relative">
+<div class="absolute inset-0 bg-cover bg-center product-img" data-alt="Minimalist automatic sliding driveway gate" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBabznL4iyi130e81KAn9iyerbBNIrZhWr57hvTT9hcMo6zYLpTEc3Fa0kHiGm2Bb5q-Vsu1REvNWmuGeR7neN7b4VaFEapsYxsgFRkPybzIPl-SzhMbgCJJI2Slvyf2DhOBdBp1r9ygw2g2PxyRrKSgbdp1H5YUq3V5NC6THelR4uO03nwaY66GTfPqfT_RwZ_jrd7MB0FSuHhh72_3deT7kS9DBk79YFfo_hItNUmVf7FTyvK0uI2Qcr457mxlyn9rZGDmeSq7d1l');"></div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_outward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main text-lg font-display font-semibold tracking-wider uppercase">BRAMA PRZESUWNA BP-02</h3>
+<div class="flex items-center gap-3 text-[#F2F2F2] text-[12px] font-medium tracking-wider uppercase opacity-80">
+<span>PROFIL 80X20</span>
+<span class="w-1 h-1 bg-border-line rounded-full"></span>
+<span>AUTOMATYKA CAME</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card group flex flex-col gap-4 cursor-pointer -mt-4 md:-mt-12">
+<div class="w-full aspect-video bg-surface overflow-hidden grid-line-b grid-line-t grid-line-l grid-line-r border-border-line group-hover:border-primary transition-colors relative">
+<div class="absolute inset-0 bg-cover bg-center product-img grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Textured concrete Joniec block wall foundation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCD3tOyEdFIjaJNraoqgRTPApS2pF75D6oL9oCWb8j25QHQrm3O6QiG9LAn30XDEDPpmFdoFkWlszVhGzjiUi3L8Lyridu6c246LU49NYl6tesEIhQ22S7E6Wny1a-gtA3kFUWSVmckTczR39fPgxoamqqFvgU4TDPuflOsJGGrba5745EmnKaXKDsSDuOAjAg15CPv_mKWveD1Yqb2cCNjY1TlHTKWUVuqtqZsk6yXe-XrJ5SDjXPwuJNfVfLFqhbCbcKltw4ntCCo');"></div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_outward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main text-lg font-display font-semibold tracking-wider uppercase">SYSTEM JONIEC ROMA</h3>
+<div class="flex items-center gap-3 text-[#F2F2F2] text-[12px] font-medium tracking-wider uppercase opacity-80">
+<span>BETON ARCHITEKTONICZNY</span>
+<span class="w-1 h-1 bg-border-line rounded-full"></span>
+<span>PODMURÓWKA</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-card group flex flex-col gap-4 cursor-pointer md:mt-8">
+<div class="w-full aspect-[3/4] bg-surface overflow-hidden grid-line-b grid-line-t grid-line-l grid-line-r border-border-line group-hover:border-primary transition-colors relative">
+<div class="absolute inset-0 bg-cover bg-center product-img" data-alt="Close up of black steel fence panels" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoz2-HvkE_kJvszHnsvRIZrmB13QIiMkqr4KmV2Jt7l9CN2nzCz3ffdxgHa7LuTz-xg4ARxzJe7-ePrrxgoiI-ls0p5L4YYg67i7eM8p-9E7kxSrxIqzN81ogyU5XFTb7ELeiv-T1jwUqFqHbFZBwl89bRM6fR6ymKlzeE9DdTqHIukNBHa11l_A9HXarKGSQYolIePWU6aHmo5vNw8uCSyYTQtXK1My44hcWL_Hzng_kiuK_yGkZh-jMGmCTq5C0MQH7dEv88AEt-');"></div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_outward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main text-lg font-display font-semibold tracking-wider uppercase">MODEL 11-X / BLIND</h3>
+<div class="flex items-center gap-3 text-[#F2F2F2] text-[12px] font-medium tracking-wider uppercase opacity-80">
+<span>ŻALUZJA STALOWA</span>
+<span class="w-1 h-1 bg-border-line rounded-full"></span>
+<span>PEŁNA PRYWATNOŚĆ</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Installation Timeline (Right/Sidebar Area) -->
+<div class="w-full lg:w-1/4 lg:pl-lg flex flex-col sticky top-[100px] self-start pt-12 lg:pt-0">
+<h4 class="text-text-main text-xl font-display font-semibold tracking-wider uppercase mb-12 flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary block"></span>
+                PROCES
+            </h4>
+<div class="relative flex flex-col gap-16 pl-6">
+<!-- Vertical Track Line -->
+<div class="absolute left-6 top-6 bottom-6 w-[1px] bg-border-line -translate-x-1/2 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col gap-4 group">
+<div class="w-12 h-12 bg-background-dark border border-border-line rounded-full flex items-center justify-center -ml-6 group-hover:border-primary group-hover:bg-primary transition-colors duration-300">
+<span class="font-display font-semibold text-text-main group-hover:text-white">01</span>
+</div>
+<div>
+<h5 class="text-text-main text-[15px] font-bold uppercase tracking-wider mb-2">POMIARY &amp; PROJEKT</h5>
+<p class="text-[#F2F2F2] text-[13px] leading-relaxed opacity-80">Analiza terenu, dobór materiałów i precyzyjne rozplanowanie linii ogrodzenia.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col gap-4 group">
+<div class="w-12 h-12 bg-background-dark border border-border-line rounded-full flex items-center justify-center -ml-6 group-hover:border-primary group-hover:bg-primary transition-colors duration-300">
+<span class="font-display font-semibold text-text-main group-hover:text-white">02</span>
+</div>
+<div>
+<h5 class="text-text-main text-[15px] font-bold uppercase tracking-wider mb-2">FUNDAMENTY (JONIEC)</h5>
+<p class="text-[#F2F2F2] text-[13px] leading-relaxed opacity-80">Prace ziemne, wylanie ław fundamentowych i murowanie słupków strukturalnych.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col gap-4 group">
+<div class="w-12 h-12 bg-background-dark border border-border-line rounded-full flex items-center justify-center -ml-6 group-hover:border-primary group-hover:bg-primary transition-colors duration-300">
+<span class="font-display font-semibold text-text-main group-hover:text-white">03</span>
+</div>
+<div>
+<h5 class="text-text-main text-[15px] font-bold uppercase tracking-wider mb-2">PRODUKCJA CNC</h5>
+<p class="text-[#F2F2F2] text-[13px] leading-relaxed opacity-80">Cięcie laserowe przęseł, spawanie konstrukcji ramy i cynkowanie ogniowe.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col gap-4 group">
+<div class="w-12 h-12 bg-background-dark border border-border-line rounded-full flex items-center justify-center -ml-6 group-hover:border-primary group-hover:bg-primary transition-colors duration-300">
+<span class="font-display font-semibold text-text-main group-hover:text-white">04</span>
+</div>
+<div>
+<h5 class="text-text-main text-[15px] font-bold uppercase tracking-wider mb-2">MONTAŻ &amp; AUTOMATYKA</h5>
+<p class="text-[#F2F2F2] text-[13px] leading-relaxed opacity-80">Osadzenie przęseł, kalibracja napędów CAME i integracja z systemem smart-home.</p>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="mt-16 pt-8 grid-line-t">
+<button class="w-full py-4 px-6 bg-transparent border border-text-main text-text-main font-display text-[14px] font-semibold tracking-wider uppercase hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 flex justify-between items-center group">
+<span>ROZPOCZNIJ PROJEKT</span>
+<span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer Area (Minimal) -->
+<footer class="w-full px-4 md:px-10 lg:px-20 py-12 grid-line-t mt-auto">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <img src="images/logo-wrotmet.jpg" alt="WROTMET Logo" class="h-10 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700">
+        </div>
+        <div class="flex flex-col items-center md:items-end gap-2">
+            <p class="text-text-main/40 text-[11px] font-medium tracking-widest uppercase">© 2026 WROTMET. WSZELKIE PRAWA ZASTRZEŻONE. | DZIAŁAMY NA TERENIE CAŁEJ POLSKI. | DZIAŁAMY NA TERENIE CAŁEJ POLSKI.</p>
+            <div class="flex gap-4 mt-2 items-center">
+                <a href="https://www.facebook.com/www.wrotmet.eu" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                <a href="https://youtu.be/lwpFwjnHqcQ?si=YBopByl7lnIpfb9f" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body></html>
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przęsła Ogrodzeniowe - WROTMET</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&amp;display=swap" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e61919",
+                        "background-light": "#0C0C0C",
+                        "background-dark": "#0C0C0C",
+                        "surface": "#141414",
+                        "text-main": "#F2F2F2",
+                        "muted": "#F2F2F2",
+                        "border-line": "#2A2A2A"
+                    },
+                    fontFamily: {
+                        "display": ["Clash Display", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "sm": "0px",
+                        "md": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-dark text-text-main font-body selection:bg-primary selection:text-white overflow-x-hidden">
+
+    <!-- Global Navigation -->
+    <div id="global-nav" class="relative flex h-auto w-full flex-col bg-[#0C0C0C] font-body grid-line-b z-50 sticky top-0 transition-all duration-300">
+        <div class="px-4 md:px-10 lg:px-20 flex flex-1 justify-center py-0">
+            <div class="flex flex-col w-full flex-1">
+                <header id="main-header" class="flex items-center justify-between whitespace-nowrap h-[80px]">
+                    <div class="flex-shrink-0 flex items-center gap-4 text-white h-full grid-line-r pr-4 md:pr-6 cursor-pointer" onclick="window.location.href='index.html'">
+                        <div class="flex items-center justify-center h-full w-auto py-4">
+                            <img src="images/logo-wrotmet.jpg" alt="WROTMET Logo" class="h-10 w-auto object-contain animate-logo-color hover:grayscale-0 transition-all duration-700" />
+                        </div>
+                    </div>
+                    <div class="hidden md:flex flex-1 justify-end gap-4 lg:gap-6 h-full">
+                        <nav class="flex items-center gap-4 lg:gap-6 h-full">
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="index.html">STRONA GŁÓWNA</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="index.html#o-nas">O NAS</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="index.html#proces">PROCES</a>
+                            <a class="text-primary text-[12px] font-medium tracking-wider uppercase h-full flex items-center grid-line-l pl-4 md:pl-6 relative" href="katalog.html">
+                                BRAMY & OGRODZENIA
+                                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-primary"></span>
+                            </a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="automatyka.html">AUTOMATYKA</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="ciecie-laserowe.html">CIĘCIE LASEROWE</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l pl-4 md:pl-6" href="realizacje.html">NASZE REALIZACJE</a>
+                            <a class="text-text-main hover:text-primary text-[12px] font-medium tracking-wider uppercase transition-colors h-full flex items-center grid-line-l px-4 md:px-6" href="kontakt.html">KONTAKT</a>
+                            <div class="flex items-center gap-4 h-full grid-line-l pl-8 pr-4">
+                                <a href="https://www.facebook.com/www.wrotmet.eu" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                                <a href="https://youtu.be/lwpFwjnHqcQ?si=YBopByl7lnIpfb9f" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 top-[80px] bg-[#0C0C0C] z-40 flex-col px-4 py-8 items-center border-t border-border-color overflow-y-auto uppercase tracking-widest text-sm text-center gap-6">
+        <a href="index.html" class="text-text-main w-full py-2">STRONA GŁÓWNA</a>
+        <a href="index.html#o-nas" class="text-text-main w-full py-2">O NAS</a>
+        <a href="index.html#proces" class="text-text-main w-full py-2">PROCES</a>
+        <a href="katalog.html" class="text-text-main w-full py-2">BRAMY & OGRODZENIA</a>
+        <a href="automatyka.html" class="text-text-main w-full py-2">AUTOMATYKA</a>
+        <a href="ciecie-laserowe.html" class="text-text-main w-full py-2">CIĘCIE LASEROWE</a>
+        <a href="realizacje.html" class="text-text-main w-full py-2">NASZE REALIZACJE</a>
+        <a href="kontakt.html" class="text-text-main w-full py-2">KONTAKT</a>
+    </div>
+
+    <main class="w-full px-4 md:px-10 lg:px-20 py-20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex flex-col gap-4 mb-20">
+                <h2 class="text-primary text-[13px] font-bold tracking-[3px] uppercase">KATALOG</h2>
+                <div class="flex flex-wrap gap-4 md:gap-8 pt-2">
+                    <a class="text-[12px] font-semibold tracking-wider uppercase text-[#F2F2F2] hover:text-primary border-b border-transparent hover:border-primary pb-1 transition-all duration-300" href="katalog.html">WSZYSTKO</a>
+                    <a class="text-[12px] font-semibold tracking-wider uppercase text-[#F2F2F2] hover:text-primary border-b border-transparent hover:border-primary pb-1 transition-all duration-300" href="bramy-skrzydlowe.html">BRAMY SKRZYDŁOWE</a>
+                    <a class="text-[12px] font-semibold tracking-wider uppercase text-[#F2F2F2] hover:text-primary border-b border-transparent hover:border-primary pb-1 transition-all duration-300" href="bramy-przesuwne.html">BRAMY PRZESUWNE</a>
+                    <a class="text-[12px] font-semibold tracking-wider uppercase text-primary border-b border-primary pb-1 transition-all duration-300" href="przesla.html">PRZĘSŁA OGRODZENIOWE</a>
+                    <a class="text-[12px] font-semibold tracking-wider uppercase text-[#F2F2F2] hover:text-primary border-b border-transparent hover:border-primary pb-1 transition-all duration-300" href="eco.html">ECO</a>
+                    <a class="text-[12px] font-semibold tracking-wider uppercase text-[#F2F2F2] hover:text-primary border-b border-transparent hover:border-primary pb-1 transition-all duration-300" href="joniec.html">JONIEC</a>
+                    <a class="text-[12px] font-semibold tracking-wider uppercase text-[#F2F2F2] hover:text-primary border-b border-transparent hover:border-primary pb-1 transition-all duration-300" href="ogrodzenia-panelowe.html">OGRODZENIA PANELOWE</a>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-display font-semibold tracking-widest uppercase mb-4">Przęsła Ogrodzeniowe</h1>
+            <p class="text-text-main opacity-60 max-w-2xl mb-16 uppercase tracking-wider text-sm leading-relaxed">
+                Nasze przęsła ogrodzeniowe to solidne i estetyczne elementy, które zapewniają bezpieczeństwo oraz spójny, elegancki wygląd całego ogrodzenia. To trwałe rozwiązanie dopasowane do każdej przestrzeni.
+            </p>
+            
+            <div id="image-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </main>
+
+    <div id="lightbox-modal" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-sm flex items-center justify-center">
+        <button class="absolute top-6 right-6 text-white hover:text-primary transition-colors z-[110]" onclick="closeLightbox()"><span class="text-4xl">&#10005;</span></button>
+        <button class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-[110]" onclick="prevImage(event)"><span class="text-5xl md:text-7xl">&#10094;</span></button>
+        <button class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-[110]" onclick="nextImage(event)"><span class="text-5xl md:text-7xl">&#10095;</span></button>
+        <div class="w-full h-full flex items-center justify-center p-4 md:p-20" onclick="closeLightbox()"><img id="lightbox-img" class="max-w-full max-h-full object-contain shadow-2xl scale-95 transition-all duration-300" src="" alt="Powiększone zdjęcie" onclick="event.stopPropagation()"></div>
+    </div>
+
+    <script>
+        const images = [
+            "p-pr.jpg", "p03.jpg", "p04.jpg", "p05.jpg", "p07.jpg", "p08.jpg", "p09.jpg", "p11.jpg", "p12.jpg", "p13.jpg",
+            "p14.jpg", "p15.jpg", "p16.jpg", "p17.jpg", "p32.jpg", "p33.jpg", "p34.jpg", "p35.jpg", "p36.jpg", "p37.jpg",
+            "p42.jpg", "p43.jpg", "p44.jpg", "p47.jpg", "p48.jpg", "p49.jpg", "p52.jpg", "p52_1.png", "p52_2.png", "p52_3.png",
+            "p53.jpg", "p53.png", "p54.jpg", "p54.png", "p55.png", "p56.png", "p56_1.png", "p57.png", "p57_1.png", "p58.png",
+            "p59.png", "p60.png", "p61.png", "p62.png", "p63.png", "p64.png", "p65.png"
+        ];
+        const folder = "Przęsła ogrodzeniowe/";
+        let currentIdx = 0;
+
+        const grid = document.getElementById('image-grid');
+        images.forEach((imgName, index) => {
+            const card = document.createElement('div');
+            card.className = "product-card group relative aspect-square bg-surface grid-line-b grid-line-t grid-line-l grid-line-r border-border-line overflow-hidden cursor-pointer flex items-center justify-center";
+            card.onclick = () => openLightbox(index);
+            card.innerHTML = `<img src="${folder}${imgName}" alt="Produkt ${imgName}" class="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" loading="lazy"><div class="absolute bottom-4 right-4 z-30 pointer-events-none opacity-40 grayscale group-hover:opacity-60 transition-opacity"><img src="images/logo-wrotmet.jpg" alt="Watermark" class="w-16 h-auto drop-shadow-lg"></div>`;
+            grid.appendChild(card);
+        });
+
+        function openLightbox(index) {
+            currentIdx = index;
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            img.src = folder + images[currentIdx];
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => img.classList.remove('scale-95'), 10);
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            img.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        function nextImage(event) {
+            if(event) event.stopPropagation();
+            currentIdx = (currentIdx + 1) % images.length;
+            document.getElementById('lightbox-img').src = folder + images[currentIdx];
+        }
+
+        function prevImage(event) {
+            if(event) event.stopPropagation();
+            currentIdx = (currentIdx - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = folder + images[currentIdx];
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('lightbox-modal');
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+    <footer class="w-full px-4 md:px-10 lg:px-20 py-12 grid-line-t mt-auto">
+        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div class="group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <img src="images/logo-wrotmet.jpg" alt="WROTMET Logo" class="h-10 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="flex-1 flex justify-center py-4 md:py-0">
+                <p class="text-primary text-[11px] font-bold tracking-[3px] uppercase">Działamy na terenie całej Polski</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-text-main/40 text-[10px] font-medium tracking-widest uppercase">© 2026 WROTMET. WSZELKIE PRAWA ZASTRZEŻONE.</p>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.facebook.com/www.wrotmet.eu" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="https://youtu.be/lwpFwjnHqcQ?si=YBopByl7lnIpfb9f" target="_blank" class="group transition-all duration-300"><svg class="w-5 h-5 group-hover:fill-[#E61919] transition-colors" style="fill: rgba(242,242,242,0.5)" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="bg-music" loop><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg"></audio>
+    <button id="music-toggle-btn" class="fixed bottom-8 right-8 z-[100] w-12 h-12 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-2xl" style="background: rgba(255,255,255,0.08);" title="Kliknij aby włączyć muzykę"><svg id="music-icon-svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

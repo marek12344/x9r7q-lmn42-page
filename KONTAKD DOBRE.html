@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WROTMET - Kontakt</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#e61919",
+              "background-light": "#f8f6f6",
+              "background-dark": "#0c0c0c",
+              "surface": "#141414",
+              "text-main": "#F2F2F2",
+              "text-muted": "#7a7a7a",
+              "border-color": "#2a2a2a"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem", "sm": "0.125rem"},
+            animation: {
+                'shake': 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both',
+            },
+            keyframes: {
+                shake: {
+                    '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                    '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                    '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                    '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+                }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0c0c0c;
+            color: #F2F2F2;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Specific layout grid lines */
+        .grid-line-right { border-right: 1px solid #2a2a2a; }
+        .grid-line-bottom { border-bottom: 1px solid #2a2a2a; }
+        
+        @media (max-width: 1024px) {
+            .grid-line-right { border-right: none; }
+        }
+
+        .consultant-frame {
+            position: relative;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+        }
+        .consultant-frame::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #e61919;
+            border-left: 2px solid #e61919;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main min-h-screen flex flex-col font-display selection:bg-primary selection:text-white">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background-dark/95 backdrop-blur-sm grid-line-bottom h-[80px] flex items-center px-6 lg:px-12">
+<div class="flex-shrink-0 flex items-center gap-4 text-white h-full pr-4 md:pr-6 cursor-pointer" onclick="window.location.href='index.html'">
+<div class="flex items-center justify-center h-full w-auto py-4">
+<img src="images/logo-wrotmet.jpg" alt="WROTMET Logo" class="h-10 w-auto object-contain animate-logo-color hover:grayscale-0 transition-all duration-700" />
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-[12px] font-medium uppercase tracking-[1px] text-text-muted hover:text-text-main transition-colors" href="index.html">STRONA GŁÓWNA</a>
+<a class="text-[12px] font-medium uppercase tracking-[1px] text-text-muted hover:text-text-main transition-colors" href="index.html#o-nas">O NAS</a>
+<a class="text-[12px] font-medium uppercase tracking-[1px] text-text-muted hover:text-text-main transition-colors" href="katalog.html">PRODUKCJA</a>
+<a class="text-[12px] font-medium uppercase tracking-[1px] text-text-muted hover:text-text-main transition-colors" href="realizacje.html">PORTFOLIO</a>
+<a class="text-[12px] font-bold uppercase tracking-[1px] text-text-main border-b border-primary pb-1" href="kontakt.html">KONTAKT</a>
+</nav>
+<button class="lg:hidden text-text-main">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</header>
+<!-- Main Content Grid -->
+<main class="flex-1 pt-[80px] flex flex-col lg:flex-row min-h-screen">
+<!-- Left Column: Contact Info -->
+<section class="w-full lg:w-1/2 p-8 lg:p-20 flex flex-col justify-center grid-line-right grid-line-bottom lg:grid-line-bottom-0 relative bg-background-dark overflow-hidden">
+<!-- Architectural Background Accent -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#2a2a2a 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative z-10 max-w-md">
+<p class="text-[12px] uppercase tracking-[2px] text-primary font-bold mb-4">Centrala Pułtusk</p>
+<h2 class="text-5xl lg:text-7xl font-bold tracking-tight mb-12 lg:mb-20 text-text-main">
+                +48 23<br/>
+<span class="text-text-muted">692 58 85</span>
+</h2>
+<div class="space-y-12">
+<div>
+<p class="text-[12px] uppercase tracking-[1px] text-text-muted mb-2">Bezpośredni kontakt</p>
+<a class="text-xl font-medium text-text-main hover:text-primary transition-colors inline-block pb-1 border-b border-border-color hover:border-primary" href="mailto:biuro@wrotmet.pl">biuro@wrotmet.pl</a>
+</div>
+<div>
+<p class="text-[12px] uppercase tracking-[1px] text-text-muted mb-2">Lokalizacja i produkcja</p>
+<p class="text-base text-text-main leading-relaxed">
+                        ul. Mickiewicza 47/49a<br/>
+                        06-100 Pułtusk<br/>
+                        Polska
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Consultant -->
+<section class="w-full lg:w-1/2 bg-surface p-8 lg:p-20 flex flex-col justify-center relative">
+<div class="max-w-md w-full mx-auto lg:mx-0">
+<div class="mb-12">
+<p class="text-[12px] uppercase tracking-[2px] text-primary font-bold mb-2">Oddział Jabłonna</p>
+<h3 class="text-3xl lg:text-4xl font-bold uppercase tracking-[1px] text-text-main leading-tight">+48 609 090 460</h3>
+</div>
+<div class="flex flex-col gap-12">
+<div>
+<p class="text-[12px] uppercase tracking-[1px] text-text-muted mb-2">Adres oddziału</p>
+<p class="text-base text-text-main leading-relaxed">
+                        ul. Modlińska 14<br/>
+                        05-110 Jabłonna
+                    </p>
+</div>
+<div class="space-y-8">
+<div>
+<p class="text-[10px] uppercase tracking-[2px] text-text-muted mb-2 font-bold">Wsparcie techniczne</p>
+<p class="text-xl font-bold uppercase tracking-[1px] text-text-main">Jacek Pieńkos</p>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<p class="text-[10px] uppercase tracking-[2px] text-text-muted mb-1 font-bold">Email</p>
+<a class="text-lg font-medium text-text-main hover:text-primary transition-colors uppercase tracking-[1px]" href="mailto:biuro@wrotmet.pl">biuro@wrotmet.pl</a>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[2px] text-text-muted mb-1 font-bold">Telefon</p>
+<a class="text-lg font-medium text-text-main hover:text-primary transition-colors tracking-[1px]" href="tel:+48236925885">+48 23 692 58 85</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-border-color">
+<p class="text-[12px] text-text-muted uppercase tracking-[1px] leading-relaxed">
+                        Nasi specjaliści są dostępni od poniedziałku do piątku w godzinach <span class="text-text-main">07:00 — 15:00</span>. Gwarantujemy analizę zapytania w ciągu 24h.
+                    </p>
+</div>
+<a class="inline-flex items-center justify-between w-full bg-primary hover:bg-primary/90 text-white font-bold text-[14px] uppercase tracking-[2px] py-5 px-8 transition-colors rounded-sm group" href="mailto:biuro@wrotmet.pl">
+<span>Wyślij zapytanie</span>
+<span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button id="music-toggle-btn" class="fixed bottom-8 right-8 z-[100] w-12 h-12 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-2xl" style="background: rgba(255,255,255,0.08);" title="Kliknij aby włączyć muzykę">
+        <svg id="music-icon-svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
