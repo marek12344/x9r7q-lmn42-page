@@ -1,0 +1,124 @@
+/* css/style.css */
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #0C0C0C;
+    color: #F2F2F2;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Clash Display', sans-serif;
+}
+
+/* Structural Grid Lines */
+.grid-line-b { border-bottom: 1px solid #2A2A2A; }
+.grid-line-t { border-top: 1px solid #2A2A2A; }
+.grid-line-l { border-left: 1px solid #2A2A2A; }
+.grid-line-r { border-right: 1px solid #2A2A2A; }
+
+/* Interactive States */
+.hover-border-primary:hover { border-color: #E61919; }
+.hover-text-primary:hover { color: #E61919; }
+
+/* Image Hover Effect */
+.product-card:hover .product-img {
+    transform: scale(1.02);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base element for background-image images */
+.bg-image-box {
+    background-size: cover;
+    background-position: center;
+    background-color: #141414;
+}
+
+/* Fade-In Observer Animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Menu Helpers */
+.mobile-menu-active {
+    display: flex !important;
+}
+
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* 3D Logo Spin (Vertical Axis) with Enhanced Lighting & Depth */
+@keyframes spin-y-axis {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)) brightness(1);
+    }
+    25% {
+        filter: drop-shadow(-10px 0 20px rgba(0,0,0,0.3)) brightness(1.2);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(180deg);
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)) brightness(0.8);
+    }
+    75% {
+        filter: drop-shadow(10px 0 20px rgba(0,0,0,0.3)) brightness(1.2);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)) brightness(1);
+    }
+}
+
+.animate-spin-3d {
+    animation: spin-y-axis 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation-delay: 4s; /* Start spin after roll-in animation completion */
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+/* Roll-in from right animation */
+@keyframes roll-in-right {
+    0% {
+        transform: translateX(100vw) rotate(720deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.animate-roll-in {
+    animation: roll-in-right 4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+}
+
+/* Wymuszany Hover Z JS dla połączonych elementów (Lewa/Prawa) */
+.hovered-sync .group-hover\:border-primary { border-color: #E61919 !important; }
+.hovered-sync .group-hover\:scale-105 { transform: scale(1.05) !important; }
+.hovered-sync .group-hover\:opacity-100 { opacity: 1 !important; }
+.hovered-sync .group-hover\:bg-primary { background-color: #E61919 !important; border-color: #E61919 !important; }
+.hovered-sync .group-hover\:text-white { color: #FFF !important; }
+.hovered-sync .group-hover\:grayscale-0 { filter: grayscale(0) !important; }
+
+/* Logo Color Cycle Animation */
+@keyframes logo-color-cycle {
+    0%, 100% { filter: grayscale(100%); }
+    50% { filter: grayscale(0%); }
+}
+
+.animate-logo-color {
+    animation: logo-color-cycle 8s ease-in-out infinite;
+}
